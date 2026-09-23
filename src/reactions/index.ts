@@ -29,6 +29,25 @@ import waveSoundOgg from "../sound/reactions/wave.ogg?url";
 import waveSoundMp3 from "../sound/reactions/wave.mp3?url";
 import baduntssSoundOgg from "../sound/reactions/baduntss.ogg?url";
 import baduntssSoundMp3 from "../sound/reactions/baduntss.mp3?url";
+// Varanda custom reaction sounds
+import fahBroSoundOgg from "../sound/reactions/fahbro.ogg?url";
+import fahBroSoundMp3 from "../sound/reactions/fahbro.mp3?url";
+import aiPaiSoundOgg from "../sound/reactions/aipai.ogg?url";
+import aiPaiSoundMp3 from "../sound/reactions/aipai.mp3?url";
+import boing0SoundOgg from "../sound/reactions/boing0.ogg?url";
+import boing0SoundMp3 from "../sound/reactions/boing0.mp3?url";
+import boing1SoundOgg from "../sound/reactions/boing1.ogg?url";
+import boing1SoundMp3 from "../sound/reactions/boing1.mp3?url";
+import boing2SoundOgg from "../sound/reactions/boing2.ogg?url";
+import boing2SoundMp3 from "../sound/reactions/boing2.mp3?url";
+import boing3SoundOgg from "../sound/reactions/boing3.ogg?url";
+import boing3SoundMp3 from "../sound/reactions/boing3.mp3?url";
+import problemaMeuSoundOgg from "../sound/reactions/problemameu.ogg?url";
+import problemaMeuSoundMp3 from "../sound/reactions/problemameu.mp3?url";
+import acordaMeninaSoundOgg from "../sound/reactions/acordamenina.ogg?url";
+import acordaMeninaSoundMp3 from "../sound/reactions/acordamenina.mp3?url";
+import risadaSoundOgg from "../sound/reactions/risada.ogg?url";
+import risadaSoundMp3 from "../sound/reactions/risada.mp3?url";
 
 export const ElementCallReactionEventType = "io.element.call.reaction";
 
@@ -200,6 +219,88 @@ export const ReactionSet: ReactionOption[] = [
     sound: {
       ogg: baduntssSoundOgg,
       mp3: baduntssSoundMp3,
+    },
+  },
+  // Varanda custom reactions
+  {
+    emoji: "🫨",
+    name: "fahbro",
+    alias: ["fah", "bro", "fahhh"],
+    sound: {
+      ogg: fahBroSoundOgg,
+      mp3: fahBroSoundMp3,
+    },
+  },
+  {
+    emoji: "🍑",
+    name: "aipai",
+    alias: ["ai pai", "para", "hihi"],
+    sound: {
+      ogg: aiPaiSoundOgg,
+      mp3: aiPaiSoundMp3,
+    },
+  },
+  {
+    emoji: "0️⃣",
+    name: "boing0",
+    alias: ["boing", "zero"],
+    sound: {
+      ogg: boing0SoundOgg,
+      mp3: boing0SoundMp3,
+    },
+  },
+  {
+    emoji: "1️⃣",
+    name: "boing1",
+    alias: ["boing", "one", "um"],
+    sound: {
+      ogg: boing1SoundOgg,
+      mp3: boing1SoundMp3,
+    },
+  },
+  {
+    emoji: "2️⃣",
+    name: "boing2",
+    alias: ["boing", "two", "dois"],
+    sound: {
+      ogg: boing2SoundOgg,
+      mp3: boing2SoundMp3,
+    },
+  },
+  {
+    emoji: "3️⃣",
+    name: "boing3",
+    alias: ["boing", "three", "tres", "timpani"],
+    sound: {
+      ogg: boing3SoundOgg,
+      mp3: boing3SoundMp3,
+    },
+  },
+  {
+    emoji: "🖕",
+    name: "problemameu",
+    alias: ["problema meu", "quem disse"],
+    sound: {
+      ogg: problemaMeuSoundOgg,
+      mp3: problemaMeuSoundMp3,
+    },
+  },
+  {
+    emoji: "🌞",
+    name: "acordamenina",
+    alias: ["acorda menina", "ana maria", "bom dia"],
+    sound: {
+      ogg: acordaMeninaSoundOgg,
+      mp3: acordaMeninaSoundMp3,
+    },
+  },
+  {
+    emoji: "🤣",
+    name: "risada",
+    alias: ["rindo", "kkkk", "haha", "laughter"],
+    sound: {
+      ogg: risadaSoundOgg,
+      mp3: risadaSoundMp3,
     },
   },
 ];
