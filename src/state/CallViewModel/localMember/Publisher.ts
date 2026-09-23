@@ -29,6 +29,7 @@ import {
   type ProcessorState,
   trackProcessorSync,
 } from "../../../livekit/TrackProcessorContext.tsx";
+import { noiseFilterSync } from "../../../livekit/NoiseFilter.ts";
 import { getUrlParams } from "../../../UrlParams.ts";
 import { observeTrackReference$ } from "../../observeTrackReference";
 import { type Connection } from "../remoteMembers/Connection.ts";
@@ -73,6 +74,8 @@ export class Publisher {
 
     // Setup track processor syncing (blur)
     this.observeTrackProcessors(this.scope, room, trackerProcessorState$);
+    // Setup noise filter syncing (Krisp)
+    noiseFilterSync(this.scope, room, this.logger);
     // Observe media device changes and update LiveKit active devices accordingly
     this.observeMediaDevices(this.scope, devices, controlledAudioDevices);
 

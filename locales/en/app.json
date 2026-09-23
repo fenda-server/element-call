@@ -217,6 +217,10 @@
     "feedback_tab_send_logs_label": "Include debug logs",
     "feedback_tab_thank_you": "Thanks, we received your feedback!",
     "feedback_tab_title": "Feedback",
+    "noise_filter_description": "Uses Krisp to remove background noise like keyboard typing, fans or barking from your microphone.",
+    "noise_filter_header": "Noise suppression",
+    "noise_filter_label": "Suppress background noise",
+    "noise_filter_not_supported_by_browser": "(Noise suppression is not supported by this browser.)",
     "opt_in_description": "<0></0><1></1>You may withdraw consent by unchecking this box. If you are currently in a call, this setting will take effect at the end of the call.",
     "preferences_tab": {
       "developer_mode_label": "Developer mode",

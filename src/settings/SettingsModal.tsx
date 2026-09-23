@@ -23,12 +23,14 @@ import {
   useSetting,
   soundEffectVolume as soundEffectVolumeSetting,
   backgroundBlur as backgroundBlurSetting,
+  noiseFilter as noiseFilterSetting,
   developerMode,
 } from "./settings";
 import { PreferencesSettingsTab } from "./PreferencesSettingsTab";
 import { Slider } from "../Slider";
 import { DeviceSelection } from "./DeviceSelection";
 import { useTrackProcessor } from "../livekit/TrackProcessorContext";
+import { supportsNoiseFilter } from "../livekit/NoiseFilter";
 import { DeveloperSettingsTab } from "./DeveloperSettingsTab";
 import { FieldRow, InputField } from "../input/Input";
 import { useSubmitRageshake } from "./submit-rageshake";
@@ -91,6 +93,43 @@ export const SettingsModal: FC<Props> = ({
             type="checkbox"
             checked={!!blurActive}
             onChange={(b): void => setBlurActive(b.target.checked)}
+            disabled={!supported}
+          />
+        </FieldRow>
+      </>
+    );
+  };
+
+  // Generate a `Checkbox` input to turn the Krisp noise filter on or off.
+  const NoiseFilterCheckbox: React.FC = (): ReactNode => {
+    const [supported, setSupported] = useState<boolean | undefined>();
+    useEffect(() => {
+      let cancelled = false;
+      void supportsNoiseFilter().then((s) => !cancelled && setSupported(s));
+      return (): void => {
+        cancelled = true;
+      };
+    }, []);
+
+    const [noiseFilterActive, setNoiseFilterActive] =
+      useSetting(noiseFilterSetting);
+
+    return (
+      <>
+        <h4>{t("settings.noise_filter_header")}</h4>
+
+        <FieldRow>
+          <InputField
+            id="activateNoiseFilter"
+            label={t("settings.noise_filter_label")}
+            description={
+              supported === false
+                ? t("settings.noise_filter_not_supported_by_browser")
+                : t("settings.noise_filter_description")
+            }
+            type="checkbox"
+            checked={!!noiseFilterActive}
+            onChange={(b): void => setNoiseFilterActive(b.target.checked)}
             disabled={!supported}
           />
         </FieldRow>
@@ -165,6 +204,8 @@ export const SettingsModal: FC<Props> = ({
             />
           </div>
         </Form>
+        <Separator />
+        <NoiseFilterCheckbox />
       </>
     ),
   };
