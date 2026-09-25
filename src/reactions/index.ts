@@ -100,6 +100,52 @@ export const ReactionsRowSize = 5;
 
 // The first {ReactionsRowSize} reactions are always visible.
 export const ReactionSet: ReactionOption[] = [
+  // Varanda favourites, always visible
+  {
+    emoji: "🫨",
+    name: "fahbro",
+    alias: ["fah", "bro", "fahhh"],
+    sound: {
+      ogg: fahBroSoundOgg,
+      mp3: fahBroSoundMp3,
+    },
+  },
+  {
+    emoji: "0️⃣",
+    name: "boing0",
+    alias: ["boing", "zero"],
+    sound: {
+      ogg: boing0SoundOgg,
+      mp3: boing0SoundMp3,
+    },
+  },
+  {
+    emoji: "🤣",
+    name: "risada",
+    alias: ["rindo", "kkkk", "haha", "laughter"],
+    sound: {
+      ogg: risadaSoundOgg,
+      mp3: risadaSoundMp3,
+    },
+  },
+  {
+    emoji: "1️⃣",
+    name: "boing1",
+    alias: ["boing", "one", "um"],
+    sound: {
+      ogg: boing1SoundOgg,
+      mp3: boing1SoundMp3,
+    },
+  },
+  {
+    emoji: "🍑",
+    name: "aipai",
+    alias: ["ai pai", "para", "hihi"],
+    sound: {
+      ogg: aiPaiSoundOgg,
+      mp3: aiPaiSoundMp3,
+    },
+  },
   {
     emoji: "👍",
     name: "thumbsup",
@@ -223,42 +269,6 @@ export const ReactionSet: ReactionOption[] = [
   },
   // Varanda custom reactions
   {
-    emoji: "🫨",
-    name: "fahbro",
-    alias: ["fah", "bro", "fahhh"],
-    sound: {
-      ogg: fahBroSoundOgg,
-      mp3: fahBroSoundMp3,
-    },
-  },
-  {
-    emoji: "🍑",
-    name: "aipai",
-    alias: ["ai pai", "para", "hihi"],
-    sound: {
-      ogg: aiPaiSoundOgg,
-      mp3: aiPaiSoundMp3,
-    },
-  },
-  {
-    emoji: "0️⃣",
-    name: "boing0",
-    alias: ["boing", "zero"],
-    sound: {
-      ogg: boing0SoundOgg,
-      mp3: boing0SoundMp3,
-    },
-  },
-  {
-    emoji: "1️⃣",
-    name: "boing1",
-    alias: ["boing", "one", "um"],
-    sound: {
-      ogg: boing1SoundOgg,
-      mp3: boing1SoundMp3,
-    },
-  },
-  {
     emoji: "2️⃣",
     name: "boing2",
     alias: ["boing", "two", "dois"],
@@ -292,15 +302,6 @@ export const ReactionSet: ReactionOption[] = [
     sound: {
       ogg: acordaMeninaSoundOgg,
       mp3: acordaMeninaSoundMp3,
-    },
-  },
-  {
-    emoji: "🤣",
-    name: "risada",
-    alias: ["rindo", "kkkk", "haha", "laughter"],
-    sound: {
-      ogg: risadaSoundOgg,
-      mp3: risadaSoundMp3,
     },
   },
 ];

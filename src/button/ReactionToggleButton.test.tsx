@@ -131,7 +131,7 @@ test("Can react with emoji", async () => {
     <TestComponent vm={vm} rtcSession={rtcSession} />,
   );
   await user.click(getByLabelText("Reactions"));
-  await user.click(getByText("🐶"));
+  await user.click(getByText("🫨"));
   expect(rtcSession.room.client.sendEvent).toHaveBeenCalledWith(
     rtcSession.room.roomId,
     ElementCallReactionEventType,
@@ -140,8 +140,8 @@ test("Can react with emoji", async () => {
         event_id: localRtcMember.eventId,
         rel_type: "m.reference",
       },
-      name: "dog",
-      emoji: "🐶",
+      name: "fahbro",
+      emoji: "🫨",
     },
   );
 });
