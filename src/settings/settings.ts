@@ -103,7 +103,7 @@ export const videoInput = new Setting<string | undefined>(
 
 export const backgroundBlur = new Setting<boolean>("background-blur", false);
 
-export const noiseFilter = new Setting<boolean>("noise-filter", true);
+export const noiseFilter = new Setting<boolean>("noise-filter", false);
 
 export const showHandRaisedTimer = new Setting<boolean>(
   "hand-raised-show-timer",
